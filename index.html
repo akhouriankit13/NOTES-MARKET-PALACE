@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+ <h1>📘 Student Notes Platform</h1>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <span id="userName"></span>
+<button onclick="userLogout()" class="btn">Logout</button>
+
+  <h1>📚 Notes Marketplace</h1>
+  <input type="text" id="search" placeholder="Search notes...">
+<a href="user-login.html" class="btn">User Login</a>
+<button class="btn" onclick="toggleTheme()">🌙</button>
+</header>
+<section style="text-align:center;padding:80px 20px;">
+  <h1 style="font-size:48px;font-weight:700;">
+    Smart Notes for Smart Students
+  </h1>
+  <p style="opacity:0.8;font-size:18px;margin-top:10px;">
+    Upload • Share • Learn • Grow
+  </p>
+</section>
+
+
+<table id="notesTable">
+  <tr>
+    <th>Note Title</th>
+    <th>Type</th>
+  </tr>
+</table>
+
+
+<script src="js/script.js"></script>
+<!-- CHATBOT -->
+<div id="chatbot">
+  <div id="chatHeader" onclick="toggleChat()">💬 ChatBot</div>
+
+  <div id="chatBody">
+    <div class="bot">Hi 👋 I am your assistant. Ask me anything!</div>
+  </div>
+
+  <div id="chatFooter">
+    <input type="text" id="chatInput" placeholder="Type a message..." />
+    <button onclick="sendMessage()">➤</button>
+  </div>
+</div>
+
+<div id="chatIcon" onclick="toggleChat()">🤖</div>
+
+</body>
+<div class="bg-shape shape1"></div>
+<div class="bg-shape shape2"></div>
+
+</html>

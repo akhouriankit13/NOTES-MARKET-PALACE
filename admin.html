@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+<body onload="checkAdmin()">
+
+<div class="login-box" style="width:95%;max-width:1000px;">
+  <h2>Admin Dashboard</h2>
+
+  <input type="text" id="noteTitle" placeholder="Note Title">
+  <input type="text" id="noteType" placeholder="PDF / DOC">
+
+  <button onclick="addNote()">➕ Add Note</button>
+  <button onclick="logout()" style="background:#ff4b2b">Logout</button>
+
+  <br><br>
+
+  <table id="adminNotesTable">
+    <tr>
+      <th>Title</th>
+      <th>Type</th>
+      <th>Actions</th>
+    </tr>
+  </table>
+
+  <canvas id="notesChart" width="400" height="200"></canvas>
+</div>
+
+
+<script src="js/script.js"></script>
+<!-- CHATBOT -->
+<div id="chatbot">
+  <div id="chatHeader" onclick="toggleChat()">💬 ChatBot</div>
+
+  <div id="chatBody">
+    <div class="bot">Hi 👋 I am your assistant. Ask me anything!</div>
+  </div>
+
+  <div id="chatFooter">
+    <input type="text" id="chatInput" placeholder="Type a message..." />
+    <button onclick="sendMessage()">➤</button>
+  </div>
+</div>
+
+<div id="chatIcon" onclick="toggleChat()">🤖</div>
+
+</body>
+<div class="bg-shape shape1"></div>
+<div class="bg-shape shape2"></div>
+
+</html>
